@@ -1,28 +1,26 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-snackbar v-model="alert.show" :color="alert.color" top>
+      {{alert.message}}
+      <v-icon small dark @click="alert.show = false">close</v-icon>
+    </v-snackbar>
+    <router-view></router-view>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { mapState } from "vuex";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  name: "app",
+  components: {},
+  computed: {
+    ...mapState({
+      alert: state => state.alert.alert
+    })
+  },
+  data() {
+    return {};
   }
-}
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
