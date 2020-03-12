@@ -12,7 +12,7 @@ const state = {
 
 const actions = {
     [LOGIN]({ commit }, { email, password }) {
-        Api.post('login', {
+        Api.post('/login', {
             email,
             password
         })
