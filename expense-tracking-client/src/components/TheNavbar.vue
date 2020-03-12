@@ -28,7 +28,6 @@
       <v-spacer class="hidden-md-and-up"></v-spacer>
       <v-toolbar-title class="text-uppercase">
         <router-link to="/dashboard" tag="span" style="cursor: pointer" class="headline">
-          <!-- <span class="grey--text text--lighten-1">Vue</span> -->
           <span class="font-weight-bold">{{ systemName }}</span>
         </router-link>
       </v-toolbar-title>
