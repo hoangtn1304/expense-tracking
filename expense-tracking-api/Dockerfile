@@ -12,5 +12,5 @@ COPY . ./
 RUN dotnet publish -c Release -o .
 
 # Heroku doesnt like ENTRYPOINT
-# ENTRYPOINT ["dotnet", "vue-expenses-api.dll"]
-CMD ASPNETCORE_URLS=http://*:$PORT dotnet vue-expenses-api.dll
+# ENTRYPOINT ["dotnet", "expense-tracking-api.dll"]
+CMD ASPNETCORE_URLS=http://*:$PORT dotnet expense-tracking-api.dll
